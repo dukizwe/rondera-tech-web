@@ -37,7 +37,7 @@
 }
 @media screen and (max-width: 800px) {
           .features {
-                    grid-template-rows: repeat(1, 300px)
+                    grid-template-rows: unset;
           }
           .feature {
                     padding: 20px 10px;
