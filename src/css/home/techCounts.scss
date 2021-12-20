@@ -1,0 +1,60 @@
+.counts .counts__container{
+          h1 {
+                    opacity: 0.8;
+                    padding: 0 20px;
+                    width: 80%;
+                    margin: auto;
+          }
+          .counts__list {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-template-rows: repeat(1, 140px);
+                    grid-gap: 20px;
+                    transition: opacity 0.3s ease-in-out;
+                    margin: 50px 0;
+          }
+          .count {
+                    background-color: #fff;
+                    padding: 10px;
+                    border-radius: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                    .image {
+                              width: 50%;
+                              img {
+                                        width: 80%;
+                                        height: 80%;
+                                        object-fit: cover;
+                              }
+                    }
+                    .text {
+                              display: flex;
+                              flex-direction: column;
+                              justify-content: center;
+                              align-items: center;
+                    }
+                    .text .number {
+                              font-size: 35px;
+                              font-weight: bold;
+                              opacity: 0.8;
+                    }
+                    .text .title {
+                              font-size: 18px;
+                    }
+          }
+} 
+@media screen and (max-width: 1000px) {
+          .counts .counts__container .counts__list {
+                    grid-template-rows: repeat(1, 100px)
+          }
+}
+@media screen and (max-width: 700px) {
+          .counts .counts__container h1 {
+                    width: 90%;
+          }
+          .counts .counts__container .counts__list {
+                    grid-template-columns: repeat(2, 1fr)
+          }
+}
