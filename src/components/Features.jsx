@@ -18,9 +18,8 @@ export default function Features() {
                                                   <div className="text">
                                                             <h3>Des techniciens fiables</h3>
                                                             <p>
-                                                                      Nous vous fournissons des techniciens spécialisés
-                                                                      dans leurs domaines pour vous dépanner
-                                                                      correctement et rapidement
+                                                                      Afin d'offrir un service de qualité à ses clients, Rondera! s'assure
+                                                                      systématiquement de la fiabilité de chacun des artisans membre de son réseau.
                                                             </p>
                                                   </div>
                                         </div>
@@ -36,9 +35,7 @@ export default function Features() {
                                                   <div className="text">
                                                             <h3>N'importe où vous êtes</h3>
                                                             <p>
-                                                                      Ne vous souciez pas de votre position,
-                                                                      Rondera cherche un technicien proche et vous
-                                                                      rejoint n'importe où vous êtes.
+                                                                      En urgence ou sur rendez-vous, l'artisan se présente où vous êtes pour résoudre votre problème
                                                             </p>
                                                   </div>
                                         </div>

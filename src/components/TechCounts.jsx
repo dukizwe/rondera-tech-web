@@ -3,7 +3,9 @@ export default function TechCounts() {
           return (
                     <div className="counts">
                               <div className="counts__container">
-                                                  <h1 className="text-center">Retrouver 5000+ techniciens facilement en seulement un appel</h1>
+                                                  <h1 className="text-center">
+                                                            Nous mettons en relation des particuliers (ou des entreprises) avec des professionnels qui soient fiables et disponibles
+                                                  </h1>
                                         <div className="counts__list">
                                                   <div className="count">
                                                             <div className="image">
