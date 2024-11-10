@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import subText from "@/helpers/subText";
 
-const baseUrl = false ? "" : "http://192.168.217.153:3000"
+const baseUrl = true ? "https://rondera-test.onrender.com" : "http://192.168.217.153:3000"
 type Params = {
    params: Promise<{
       opportunityId: string,
