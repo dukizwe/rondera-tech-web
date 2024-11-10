@@ -16,34 +16,43 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
    const opportunityId = decodeId(encodedOpportunityId)
    const opportunityRes = await fetch(`${baseUrl}/opportunities/${opportunityId}`)
    const opportunity = (await opportunityRes.json()).data
-   if(!opportunity) {
+   if (!opportunity) {
       return {
          title: "Opportunity not found",
       }
    }
-   const postPhotourl = opportunity.photo || opportunity.linkMetadata.image
+   const postPhotourl = opportunity.photo || opportunity.linkMetadata?.image
    return {
-     title: opportunity.title,
-     description: subText(opportunity.description, 200),
-     openGraph: {
-      images: postPhotourl ? [{ url: postPhotourl }] : [],
-      siteName: "Rondera",
-      locale: "fr_FR",
-      type: "article",
-      publishedTime: opportunity.createdAt,
       title: opportunity.title,
       description: subText(opportunity.description, 200),
-     }
+      openGraph: {
+         images: postPhotourl ? [{ url: postPhotourl }] : [],
+         siteName: "Rondera",
+         locale: "fr_FR",
+         type: "article",
+         publishedTime: opportunity.createdAt,
+         title: opportunity.title,
+         description: subText(opportunity.description, 200),
+      }
    }
- }
+}
 
 export default async function OpportunityDetailsPage({ params }: Params) {
    const encodedOpportunityId = (await params).opportunityId
    const opportunityId = decodeId(encodedOpportunityId)
    const opportunityRes = await fetch(`${baseUrl}/opportunities/${opportunityId}`)
-   const opportunity = await opportunityRes.json()
-   if(!opportunity.data) {
+   const opportunity = (await opportunityRes.json()).data
+   if (!opportunity) {
       return notFound()
+   }
+   const postPhotourl = opportunity.photo || opportunity.linkMetadata?.image
+   if (postPhotourl) {
+      return <img
+         src={postPhotourl}
+         alt={opportunity.title}
+         width={300}
+         height={300}
+      />
    }
    return null
 }
