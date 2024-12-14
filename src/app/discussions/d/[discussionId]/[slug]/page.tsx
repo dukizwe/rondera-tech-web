@@ -1,6 +1,6 @@
 import { decodeId } from "@/helpers/IdEncryption";
 import { Metadata } from "next";
-import { notFound, redirect } from "next/navigation";
+import { notFound } from "next/navigation";
 
 const baseUrl = false ? "https://rondera-test.onrender.com" : "http://192.168.222.153:3000"
 type Params = {
@@ -44,6 +44,5 @@ export default async function DiscussionDetailsPage({ params }: Params) {
    if (!opportunity) {
       return notFound()
    }
-   redirect("https://play.google.com/store/apps/details?id=com.dukizwe.betteur")
    return null
 }

@@ -1,6 +1,6 @@
 import { decodeId } from "@/helpers/IdEncryption";
 import { Metadata } from "next";
-import { notFound, redirect } from "next/navigation";
+import { notFound } from "next/navigation";
 
 const baseUrl = true ? "https://rondera-test.onrender.com" : "http://192.168.217.153:3000"
 type Params = {
@@ -44,8 +44,5 @@ export default async function OpportunityDetailsPage({ params }: Params) {
    if (!opportunity) {
       return notFound()
    }
-   redirect("https://play.google.com/store/apps/details?id=com.dukizwe.betteur")
-   // const postPhotourl = opportunity.photo || opportunity.linkMetadata?.image
-   // window.location.href = `betteur://rondera${window.location.pathname}`
    return null
 }
