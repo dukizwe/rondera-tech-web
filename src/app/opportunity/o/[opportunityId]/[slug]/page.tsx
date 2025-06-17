@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       description: opportunity.description,
       openGraph: {
          images: postPhotourl ? [{ url: postPhotourl }] : [],
-         siteName: "Rondera",
+         siteName: "Job Spring",
          locale: "fr_FR",
          type: "article",
          publishedTime: opportunity.createdAt,

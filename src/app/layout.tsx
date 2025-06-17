@@ -14,7 +14,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Rondera",
+  title: "Job Spring",
   description: "Plateforme d'opportunités. #Emploi #Formation  #Affaires",
 };
 
